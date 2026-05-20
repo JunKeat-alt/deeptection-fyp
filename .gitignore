@@ -1,0 +1,70 @@
+# =========================
+# Python
+# =========================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+
+# =========================
+# Node / React
+# =========================
+node_modules/
+dist/
+build/
+.vite/
+
+# =========================
+# Environment files
+# =========================
+.env
+.env.local
+.env.*.local
+backend/.env
+
+# =========================
+# Datasets and media files
+# =========================
+datasets/
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
+*.mp3
+*.wav
+*.m4a
+*.flac
+*.ogg
+*.zip
+
+# =========================
+# Backend generated storage and model cache
+# =========================
+backend/storage/
+!backend/storage/.gitkeep
+backend/history/history.json
+
+# =========================
+# Test harness generated / private files
+# =========================
+test_harness/cases/
+test_harness/tmp_audio.wav
+test_harness/latest_harness_result.txt
+
+# =========================
+# Logs
+# =========================
+*.log
+logs/
+
+# =========================
+# OS / editor
+# =========================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

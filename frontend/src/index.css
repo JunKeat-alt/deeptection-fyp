@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------- Base ---------- */
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply bg-paper text-ink font-sans;
+    background-image:
+      radial-gradient(60% 40% at 50% 0%, rgba(46, 95, 255, 0.06), transparent 65%),
+      radial-gradient(rgba(11, 15, 20, 0.035) 1px, transparent 1px);
+    background-size: auto, 22px 22px;
+    background-position: 0 0, 0 0;
+    background-attachment: fixed;
+    min-height: 100dvh;
+  }
+
+  /* Fraunces optical-size for big display text */
+  h1, .display {
+    font-family: theme("fontFamily.display");
+    font-variation-settings: "opsz" 128, "SOFT" 30;
+    letter-spacing: -0.02em;
+  }
+
+  h2, h3 {
+    font-family: theme("fontFamily.display");
+    font-variation-settings: "opsz" 64, "SOFT" 30;
+    letter-spacing: -0.015em;
+  }
+
+  ::selection {
+    background: rgba(46, 95, 255, 0.22);
+    color: inherit;
+  }
+
+  button, [role="button"] {
+    @apply select-none;
+  }
+}
+
+/* ---------- Reusable component classes ---------- */
+@layer components {
+  .container-app {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
+  }
+
+  .card {
+    @apply rounded-xl2 bg-paper-raised shadow-card ring-1 ring-black/5;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full
+           px-5 py-3 text-sm font-medium transition
+           focus:outline-none focus-visible:ring-2 focus-visible:ring-accent
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-primary {
+    @apply btn bg-ink text-paper-raised hover:bg-ink-soft;
+  }
+
+  .btn-ghost {
+    @apply btn bg-transparent text-ink-muted hover:bg-black/5;
+  }
+
+  .btn-pill {
+    @apply btn bg-paper-raised text-ink ring-1 ring-black/10 hover:bg-paper-sunken;
+  }
+
+/* ---------- Dropzone (dashed border, classic drop-target style) ---------- */
+  .dropzone {
+    @apply relative cursor-pointer rounded-3xl
+           border-2 border-dashed border-black/15
+           bg-paper-raised
+           px-8 py-16 text-center
+           transition-all duration-300 ease-out;
+    box-shadow:
+      0 1px 2px rgba(15, 23, 42, 0.03),
+      0 8px 24px -10px rgba(15, 23, 42, 0.08);
+  }
+
+.dropzone:hover {
+    @apply bg-white;
+    border-color: rgb(46 95 255);   /* accent blue */
+    transform: translateY(-1px);
+    box-shadow:
+      0 1px 2px rgba(15, 23, 42, 0.04),
+      0 14px 30px -10px rgba(46, 95, 255, 0.15);
+  }
+
+  .dropzone--active {
+    @apply bg-accent/[0.04];
+    border-color: rgb(46 95 255);   /* accent blue */
+    transform: translateY(-1px) scale(1.005);
+    box-shadow:
+      0 0 0 4px rgba(46, 95, 255, 0.08),
+      0 16px 36px -10px rgba(46, 95, 255, 0.2);
+  }
+
+
+
+  /* Verdict pill */
+  .verdict-pill {
+    @apply inline-flex items-center gap-2 rounded-full px-4 py-1.5
+           text-xs font-semibold uppercase tracking-wide;
+  }
+
+  /* Subtle divider with label */
+  .section-eyebrow {
+    @apply text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-ink-subtle;
+  }
+
+  /* Shimmer loading bar */
+  .shimmer {
+    background: linear-gradient(90deg,
+      rgba(11, 15, 20, 0.04) 0%,
+      rgba(11, 15, 20, 0.10) 50%,
+      rgba(11, 15, 20, 0.04) 100%);
+    background-size: 800px 100%;
+    @apply animate-shimmer;
+  }
+}
