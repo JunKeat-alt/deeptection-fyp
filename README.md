@@ -6,6 +6,8 @@ Deeptection is a web-based deepfake verification system developed as a Final Yea
 
 The system helps non-technical users, especially parents, guardians, and elderly individuals, verify suspicious multimedia messages by analysing both video and audio for signs of AI-generated manipulation.
 
+<img width="1322" height="935" alt="image" src="https://github.com/user-attachments/assets/ce536124-799f-476a-870d-8af05db4c602" />
+
 ---
 
 ## Features
