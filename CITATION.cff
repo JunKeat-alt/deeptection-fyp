@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+
+title: "Deeptection"
+
+message: "If you use this project, please cite it as follows."
+
+type: software
+
+authors:
+  - family-names: Koh
+    given-names: Jun Keat
+
+repository-code: https://github.com/<YOUR_USERNAME>/Deeptection
+
+license: MIT
+
+keywords:
+  - deepfake
+  - phishing
+  - cybersecurity
+  - computer vision
+  - audio analysis
+  - multimodal
+  - AI
+  - FastAPI
+  - React
+
+abstract: >
+  Deeptection is a web-based multimodal deepfake verification system
+  developed to help non-technical users detect AI-generated
+  audio and video used in phishing attacks.
+
+version: 1.0.0
+
+date-released: 2026-06-30
