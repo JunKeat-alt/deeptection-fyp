@@ -1,28 +1,160 @@
 # Deeptection
 
-Deeptection is an AI-based multimodal deepfake detection web prototype developed for Final Year Project. The system allows users to upload video or audio files and returns a Real, Fake, or Uncertain verdict with score, confidence, and explanation.
+> AI-Based Deepfake-Enabled Phishing Detection Framework for Verifying Multimedia Messages Using Computer Vision and Audio Analysis
 
-## Main Features
+Deeptection is a web-based deepfake verification system developed as a Final Year Project (FYP) at Asia Pacific University of Technology & Innovation (APU).
 
-- Video and audio file upload
-- Daily Message and Clear Media analysis modes
+The system helps non-technical users, especially parents, guardians, and elderly individuals, verify suspicious multimedia messages by analysing both video and audio for signs of AI-generated manipulation.
+
+---
+
+## Features
+
 - Video deepfake detection
 - Audio deepfake detection
-- Confidence-aware fusion logic
-- Result explanation
-- History page
-- Multilingual interface
-- Manual test harness for scenario-based testing
+- Multimodal decision fusion
+- Confidence scoring
+- Explainable AI detection report
+- Risk assessment
+- Decision logging
+- Web-based interface
+- Lightweight deployment
+
+---
+
+## Project Architecture
+
+```
+Frontend (React)
+
+        │
+
+        ▼
+
+Backend (FastAPI)
+
+        │
+
+        ├── Video Detection Module
+        ├── Audio Detection Module
+        ├── Decision Fusion Engine
+        ├── Explainable AI Report Generator
+        └── Decision Logger
+```
+
+---
 
 ## Technology Stack
 
-- React + Vite frontend
-- Flask backend
-- PyTorch machine learning models
-- FFmpeg for media processing
-- MediaPipe for face detection
-- Google Colab for model training
+### Frontend
 
-## Notes
+- React
+- JavaScript
+- HTML5
+- CSS3
 
-Model checkpoint files, datasets, test media files, and private environment files are not included in this repository due to file size and privacy reasons.
+### Backend
+
+- FastAPI
+- Python
+
+### AI & Machine Learning
+
+- PyTorch
+- ONNX Runtime
+- OpenCV
+
+### Multimedia Processing
+
+- FFmpeg
+- Librosa
+- NumPy
+
+---
+
+## Project Objectives
+
+- Detect manipulated video content
+- Detect AI-generated voice
+- Combine audio and video predictions
+- Produce understandable verification reports
+- Improve protection against deepfake-enabled phishing attacks
+
+---
+
+## Installation
+
+Clone the repository.
+
+```bash
+git clone https://github.com/<username>/Deeptection.git
+```
+
+Install backend dependencies.
+
+```bash
+pip install -r requirements.txt
+```
+
+Install frontend dependencies.
+
+```bash
+npm install
+```
+
+Run backend.
+
+```bash
+uvicorn app:app --reload
+```
+
+Run frontend.
+
+```bash
+npm start
+```
+
+---
+
+## Disclaimer
+
+This project is developed for educational and research purposes as part of an undergraduate Final Year Project.
+
+It should not be considered a replacement for professional forensic analysis or commercial deepfake detection systems.
+
+---
+
+## Third-Party Components
+
+This project incorporates several open-source libraries, pretrained models, and publicly available datasets.
+
+Please refer to:
+
+- THIRD_PARTY_LICENSES.md
+- NOTICE.md
+
+---
+
+## Citation
+
+If you use this project in academic work, please cite:
+
+```
+Koh, J. K.
+
+Deeptection: AI-Based Deepfake-Enabled Phishing Detection Framework for Verifying Multimedia Messages Using Computer Vision and Audio Analysis.
+
+Final Year Project
+
+Asia Pacific University of Technology & Innovation
+
+2026
+```
+
+---
+
+## License
+
+This project is licensed under the MIT License.
+
+See the LICENSE file for details.
